@@ -1,5 +1,5 @@
 Summary:	DevHelp book: gconf
-Summary(pl):	Ksi±¿ka do DevHelp'a o gconf
+Summary(pl):	Ksi±¿ka do DevHelpa o gconfie
 Name:		devhelp-book-gconf
 Version:	1.0
 Release:	1
@@ -11,34 +11,28 @@ Requires:	devhelp
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6/share/devhelp/
+%define		_prefix		/usr/X11R6/share/devhelp
 
 %description
-DevHelp book about gconf
+DevHelp book about gconf.
 
 %description -l pl
-Ksi±¿ka do DevHelp o gconf
+Ksi±¿ka do DevHelpa o gconfie.
 
 %prep
-%setup -q -c gconf -n gconf
-
-%build
-mv -f book gconf
-mv -f book.devhelp gconf.devhelp
+%setup -q -c -n gconf
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_prefix}/{books/gconf,specs}
 
-install -d $RPM_BUILD_ROOT%{_prefix}/books/gconf
-install -d $RPM_BUILD_ROOT%{_prefix}/specs
-install gconf.devhelp $RPM_BUILD_ROOT%{_prefix}/specs
-install gconf/* $RPM_BUILD_ROOT%{_prefix}/books/gconf
+install book.devhelp $RPM_BUILD_ROOT%{_prefix}/specs/gconf.devhelp
+install book/* $RPM_BUILD_ROOT%{_prefix}/books/gconf
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files 
 %defattr(644,root,root,755)
-#%doc *.gz
-%{_prefix}/books
-%{_prefix}/specs
+%{_prefix}/books/*
+%{_prefix}/specs/*
