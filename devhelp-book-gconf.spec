@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.devhelp.net/books/books/gconf.tar.gz
+# Source0-md5:	3df7a075494c01520fb282b25683c2a1
 URL:		http://www.devhelp.net/
 Requires:	devhelp
 BuildArch:	noarch
