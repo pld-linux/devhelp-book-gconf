@@ -1,5 +1,5 @@
 Summary:	DevHelp book: gconf
-Summary(pl.UTF-8):   Książka do DevHelpa o gconfie
+Summary(pl.UTF-8):	Książka do DevHelpa o gconfie
 Name:		devhelp-book-gconf
 Version:	1.0
 Release:	1
