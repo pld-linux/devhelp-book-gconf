@@ -1,5 +1,5 @@
 Summary:	DevHelp book: gconf
-Summary(pl):	Ksi±¿ka do DevHelpa o gconfie
+Summary(pl.UTF-8):   KsiÄ…Å¼ka do DevHelpa o gconfie
 Name:		devhelp-book-gconf
 Version:	1.0
 Release:	1
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DevHelp book about gconf.
 
-%description -l pl
-Ksi±¿ka do DevHelpa o gconfie.
+%description -l pl.UTF-8
+KsiÄ…Å¼ka do DevHelpa o gconfie.
 
 %prep
 %setup -q -c -n gconf
